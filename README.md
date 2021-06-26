@@ -13,3 +13,11 @@ ChatCoreで設定を頑張ります。（EnahncedStreamChatとかSRMが動いて
 |----|----|----|
 | Enable | bool | ゲーム中に表示するかどうか |
 | ScreenYPos | float | スクリーン地面からの高さ。1増えると1m上に上がります。|
+
+ ## 置換文字列
+| 置換元 | 置換後 |
+|----|----|
+| %SUBSCRIBER% | サブスクしてくれた人 |
+| %GIFT% | ギフトを送ってくれた人 |
+| %BITS_SENDER% | ビッツを送ってくれた人 |
+| %RAIDER% | レイドしてくれた人 |
