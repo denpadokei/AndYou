@@ -90,9 +90,6 @@ namespace AndYou.Models
         private void ChatService_OnTextMessageReceived(ChatCore.Interfaces.IChatService arg1, ChatCore.Interfaces.IChatMessage arg2)
         {
             if (arg2 is TwitchMessage twitch) {
-                if (!twitch.IsSystemMessage) {
-                    return;
-                }
                 switch (twitch.GetMessageType()) {
                     case TwitchMessageType.Bits:
                         this.BitsSenders.Add(twitch.Sender.DisplayName);

@@ -11,6 +11,11 @@ namespace AndYou.Extentions
     {
         public static TwitchMessageType GetMessageType(this TwitchMessage message)
         {
+#if DEBUG
+            foreach (var item in message.Metadata) {
+                Plugin.Log.Debug($"{item.Key} : {item.Value}");
+            }
+#endif
             if (message.Metadata.TryGetValue("msg-id", out var id)) {
                 if (id == "raid") {
                     return TwitchMessageType.Raid;
